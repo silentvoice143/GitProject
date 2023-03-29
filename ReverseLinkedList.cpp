@@ -31,7 +31,25 @@ void traverse(node* head)
 }
 
 
+node* reverse(node* head)
+{
+    if(head==NULL || head->next==NULL)
+    return head;
 
+    node* prev=NULL;
+    node* curr=head;
+    node* Nnext=head;
+
+    while(curr!=NULL)
+    {
+        Nnext=curr->next;
+        curr->next=prev;
+        prev=curr;
+        curr=Nnext;
+    }
+    cout<<endl;
+    return prev;
+}
 
 
 int main()
