@@ -51,6 +51,13 @@ node* reverse(node* head)
     return prev;
 }
 
+node* frontAdd(node *head,int val)
+{
+    node *n=new node(val);
+    n->next=head;
+    head=n;
+    return head;
+}
 
 int main()
 {
